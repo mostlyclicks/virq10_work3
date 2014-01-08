@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140108172515) do
+ActiveRecord::Schema.define(:version => 20140108173347) do
+
+  create_table "refinery_businesses", :force => true do |t|
+    t.string   "company_name"
+    t.string   "company_url"
+    t.string   "email"
+    t.string   "phone_number"
+    t.text     "address"
+    t.text     "hours"
+    t.text     "description"
+    t.integer  "category_id"
+    t.integer  "position"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "refinery_categories", :force => true do |t|
     t.string   "name"

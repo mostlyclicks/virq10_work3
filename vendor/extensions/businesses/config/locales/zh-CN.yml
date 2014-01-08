@@ -1,0 +1,36 @@
+zh-CN:
+  refinery:
+    plugins:
+      businesses:
+        title: Businesses
+    businesses:
+      admin:
+        businesses:
+          actions:
+            create_new: 建立新的 Business
+            reorder: 对 Businesses 重新排序
+            reorder_done: 对 Businesses 的重新排序结束
+          records:
+            title: Businesses
+            sorry_no_results: 对不起，未找到结果。 #Sorry! There are no results found.
+
+            # There are no Businesses yet. Click "Add New Business" to add your first business.
+            no_items_yet: 目前没有 Businesses . 点击 "Add New Business" 创建一个business.
+          business:
+            view_live_html: 查看 business 的最新内容.<br/><em>(新窗口中打开)</em>
+            edit: 编辑 business
+            delete: 永久删除 business
+      businesses:
+        show:
+          other: 其他 Businesses
+  activerecord:
+    attributes:
+      'refinery/businesses/business':
+        company_name: Company Name
+        company_url: Company Url
+        email: Email
+        phone_number: Phone Number
+        address: Address
+        hours: Hours
+        description: Description
+        category_id: Category

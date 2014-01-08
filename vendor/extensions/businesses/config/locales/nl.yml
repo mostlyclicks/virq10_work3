@@ -1,0 +1,34 @@
+nl:
+  refinery:
+    plugins:
+      businesses:
+        title: Businesses
+    businesses:
+      admin:
+        businesses:
+          actions:
+            create_new: Nieuwe Business toevoegen
+            reorder: De volgorde van de Businesses wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Business-volgorde
+          records:
+            title: Businesses
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Businesses. Druk op 'Nieuwe Business toevoegen' om de eerste toe te voegen.
+          business:
+            view_live_html: Deze business op de website bekijken <br/><em>(opent in een nieuw venster)</em>
+            edit: Bewerk deze business
+            delete: Deze business definitief verwijderen
+      businesses:
+        show:
+          other: Andere Businesses
+  activerecord:
+    attributes:
+      'refinery/businesses/business':
+        company_name: Company Name
+        company_url: Company Url
+        email: Email
+        phone_number: Phone Number
+        address: Address
+        hours: Hours
+        description: Description
+        category_id: Category

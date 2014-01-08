@@ -1,0 +1,50 @@
+<%= form_for [refinery, :businesses_admin, @business] do |f| -%>
+  <%= render '/refinery/admin/error_messages',
+              :object => @business,
+              :include_object_name => true %>
+
+  <div class='field'>
+    <%= f.label :company_name -%>
+    <%= f.text_field :company_name, :class => 'larger widest' -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :company_url -%>
+    <%= f.text_field :company_url -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :email -%>
+    <%= f.text_field :email -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :phone_number -%>
+    <%= f.text_field :phone_number -%>
+  </div>
+
+  <div class='field'>
+    <%= render '/refinery/admin/wysiwyg',
+                :f => f,
+                :fields => [:address, :hours, :description],
+                :object => "businesses/business" -%>
+  </div>
+
+  <div class='field'>
+    <%= f.label :category_id -%>
+    <%= f.number_field :category_id -%>
+  </div>
+
+  <%= render '/refinery/admin/form_actions', :f => f,
+             :continue_editing => false,
+             :delete_title => t('delete', :scope => 'refinery.businesses.admin.businesses.business'),
+             :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @business.company_name) -%>
+<% end -%>
+
+<% content_for :javascripts do -%>
+  <script>
+    $(document).ready(function(){
+      page_options.init(false, '', '');
+    });
+  </script>
+<% end -%>

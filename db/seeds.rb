@@ -39,3 +39,59 @@ p = Refinery::Categories::Category.create ([
   {name: 'Legal', description: 'Seed data'},
   {name: 'Miscellaneous'}
 ])
+
+# Added by Refinery CMS Businesses extension
+Refinery::Businesses::Engine.load_seed
+
+b = Refinery::Businesses::Business.create ([
+  {
+    company_name: "Bill's",
+    company_url: "http://www.example.com",
+    email: "bill@example.com",
+    phone_number: "555-555-5555",
+    address: "111 Main Street, Viroqua WI 555555",
+    hours: "Mon-Fri: 9-5, Sat: 9-4, Sun: closed",
+    description: "A small bar in Viroqua",
+    category_id: 1
+  },
+  {
+    company_name: "Joes's",
+    company_url: "http://www.example.com",
+    email: "Joe@example.com",
+    phone_number: "555-555-5555",
+    address: "112 Main Street, Viroqua WI 555555",
+    hours: "Mon-Fri: 9-5, Sat: 9-4, Sun: closed",
+    description: "A small restaurant in Viroqua",
+    category_id: 1
+  },
+  {    
+    company_name: "Jill's",
+    company_url: "http://www.example.com",
+    email: "jill@example.com",
+    phone_number: "555-555-5555",
+    address: "113 Main Street, Viroqua WI 555555",
+    hours: "Mon-Fri: 9-5, Sat: 9-4, Sun: closed",
+    description: "A small shop in Viroqua",
+    category_id: 1
+  },
+  {
+    company_name: "Mike's",
+    company_url: "http://www.example.com",
+    email: "mike@example.com",
+    phone_number: "555-555-5555",
+    address: "114 Main Street, Viroqua WI 555555",
+    hours: "Mon-Fri: 9-5, Sat: 9-4, Sun: closed",
+    description: "A small garage in Viroqua",
+    category_id: 1
+  },
+  {
+    company_name: "Kate's",
+    company_url: "http://www.example.com",
+    email: "kate@example.com",
+    phone_number: "555-555-5555",
+    address: "114 Main Street, Viroqua WI 555555",
+    hours: "Mon-Fri: 9-5, Sat: 9-4, Sun: closed",
+    description: "A small park in Viroqua",
+    category_id: 1
+  }
+])

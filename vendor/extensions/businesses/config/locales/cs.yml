@@ -1,0 +1,34 @@
+cs:
+  refinery:
+    plugins:
+      businesses:
+        title: Businesses
+    businesses:
+      admin:
+        businesses:
+          actions:
+            create_new: Přidat Business
+            reorder: Řadit Businesses
+            reorder_done: Konec řazení Businesses
+          records:
+            title: Businesses
+            sorry_no_results: Litujeme, ale nebyly nalezny žádné výsledky.
+            no_items_yet: Zatím nebyly vytvořeny žádné Businesses. Zvolte "Přidat Business" pro přidání prvního business.
+          business:
+            view_live_html: Zobrazit náhled business<br/><em>(otevře se v novém okně)</em>
+            edit: Upravit business
+            delete: Smazat business
+      businesses:
+        show:
+          other: Další Businesses
+  activerecord:
+    attributes:
+      'refinery/businesses/business':
+        company_name: Company Name
+        company_url: Company Url
+        email: Email
+        phone_number: Phone Number
+        address: Address
+        hours: Hours
+        description: Description
+        category_id: Category
